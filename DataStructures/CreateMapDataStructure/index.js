@@ -1,4 +1,4 @@
-const Map = () => {
+const Map = function () {
     this.collection = {}
 
     this.has = key => {
