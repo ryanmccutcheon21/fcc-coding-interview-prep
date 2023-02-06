@@ -25,4 +25,22 @@ function LinkedList() {
         }
         length++
     }
+
+    this.remove = element => {
+        if (head.element === element) {
+            head = head.next
+            return length--
+        }
+        let previous = head
+        while (previous) {
+            let current = previous.next
+            if (current) {
+                if (current.element === element) {
+                    previous.next = current.next
+                    return length--
+                }
+            }
+            previous = current
+        }
+    }
 }
